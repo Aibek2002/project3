@@ -131,62 +131,54 @@ if __name__=='__main__':
 	t3.print_info()
 	aik()
 	print()
-	#average scores(Aiya)
-	def average(a,b,c,d):
-		sum1=a.score_m+a.score_p+a.score_h
-		sum2=b.score_m+b.score_p+b.score_h
-		sum3=c.score_m+c.score_p+c.score_h
-		sum4=d.score_m+d.score_p+d.score_h
 
-		avr1=sum1/3
-		avr2=sum2/3
-		avr3=sum3/3
-		avr4=sum4/3
-		return avr1,avr2,avr3,avr4
+
 	
-	print('Averages:', average(stud1,stud2,stud3,stud4))
-	print()
-	#Galymmzhan	
-	#Maximum score
-	maxm=None
-	maxp=None
-	maxh=None
-	listm=[stud1.score_m,stud2.score_m,stud3.score_m,stud4.score_m]
-	for item in listm:
-		if maxm is None or item>maxm:
-			maxm=item
-	print('Max Math: ', maxm)
-	
-	listh=[stud1.score_h,stud2.score_h,stud3.score_h,stud4.score_h]
-	for item in listh:
-		if maxh is None or item>maxh:
-			maxh=item
-
-	print("Max History: ",maxh)
-
-	listp=[stud1.score_p,stud2.score_p,stud3.score_p,stud4.score_p]
-	for item in listp:
-		if maxp is None or item>maxp:
-			maxp=item
-
-	print('Max Prog: ',maxp)
-	
-def letters_ball(grade):
-        if 90 <= grade <= 100:
-            return 'A'
-        elif 80 <= grade <= 89:
-            return 'B'
-        elif 70 <= grade <= 79:
-            return 'C'
-        elif 60 <= grade <= 69:
-            return 'D'
+#Aibek
+def osenka():
+        if 95 <= grade <= 100:
+                print("Уровень: A")
+        elif 90 <= grade <= 94:
+                print("Уровень: A-")
+        elif 85 <= grade <= 89:
+                print("Уровень: B+")
+        elif 80 <= grade <= 84:
+                print("Уровень: B")
+        elif 75 <= grade <= 79:
+                print("Уровень: B-")
+        elif 70 <= grade <= 74:
+                print("Уровень: C+")
+        elif 65 <= grade <= 69:
+                print("Уровень: C")
+        elif 60 <= grade <= 64:
+                print("Уровень: C-")
+        elif 55 <= grade <= 59:
+                print("Уровень: D+")
+        elif 50 <= grade <= 54:
+                print("Уровень: D")
+        elif 25 <= grade <= 49:
+                print("Уровень: FX")
         else:
-            return 'F'
+                print("Уровень: F")
 
 
 
 
 
+#Aibek
+listh=[stud1.score_h,stud2.score_h,stud3.score_h,stud4.score_h]
 
+print("-----ОЦЕНКА ИСТОРИ-----")
+for grade in listh:
+        osenka()
+print("-----ОЦЕНКА МАТЕМАТИКИ-----")
 
+listm=[stud1.score_m,stud2.score_m,stud3.score_m,stud4.score_m]
+for grade in listm:
+	osenka()
+print("-----ОЦЕНКА ПРОГРАМИНГ-----")
+
+listp=[stud1.score_p,stud2.score_p,stud3.score_p,stud4.score_p]
+for item in listp:
+	osenka()
 
